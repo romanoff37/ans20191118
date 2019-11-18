@@ -1,0 +1,15 @@
+---
+- name: Roman Playbook to intsall
+  hosts: raiders
+  gather_facts: no
+
+  tasks:
+          - name: ensure python is installed
+            raw: "apt install python3 -y"
+            become: yes
+
+          - name: Create a new usergroup on indy
+            group:
+                    name: sandbox
+                    state: present
+            become: yes
