@@ -1,0 +1,15 @@
+---
+- hosts: planetexpress
+
+  vars:
+    ship_name: "Bessie"
+    ship_type: "Intergalactic"
+    engines: "Dark Matter"
+    dark_Matter_balls: 63
+    ship_price_in_beans: 2
+
+  tasks:
+    - name: "Configure sace ship config file"
+      template: 
+        src:  /home/student/templates/ship.cfg.j2
+        dest: ~/ship.cfg

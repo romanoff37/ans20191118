@@ -3,8 +3,8 @@
   hosts: raiders
   gather_facts: False
 
-    - files/newusers.yml
-    - files/morenewusers.yml
+    - files/indyusers.yml
+    - files/moreindyusers.yml
   vars_files: 
           - vars/indyusers.yml
           - vars/moreindyusers.yml
@@ -30,4 +30,4 @@
                     state: present
                     group: indymovies
             become: yes
-            loop: "{{ newusers + morenewusers }}"
+            loop: "{{ indyusers + moreindyusers }}"
