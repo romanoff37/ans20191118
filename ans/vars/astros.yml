@@ -1,0 +1,18 @@
+---
+astros:
+ people:
+ - name: Christian Koch
+   craft: ISS
+ - name: Alexander Skvortosv
+   craft: ISS
+ - name: Luca Parmitano
+   craft: ISS
+ - name: Andrew Morgan
+   craft: ISS
+ - name: Oleg Skripochka
+   craft: ISS
+ - name: Jessica Meir
+   craft: ISS
+ number: 6
+ mesage: success
+

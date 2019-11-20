@@ -1,0 +1,18 @@
+---
+- name: print out astors data form var file
+  hosts: localhost
+  connection: local
+  vars:
+          astros: "{{ lookup('url', 'http://api.open-notify.org/astros.json') }}"
+          
+  tasks:
+          - name: print out Jesic Meir
+            debug: 
+                    msg: "{{ astros.people[5].name }}"
+          - name: print out all astros
+            debug:
+                    msg: "{{ item.name }}"
+            loop: "{{ astros.people }}"
+          - name: pront out number of astros ISS
+            debug:
+                    msg: "{{ astros.number }}"
